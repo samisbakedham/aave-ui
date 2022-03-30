@@ -31,7 +31,7 @@ ARG REACT_APP_PORTIS_DAPP_ID
 
 ADD ./ /app
 
-FROM nginx:alpine
+FROM nginx:1.21-alpine
 
 COPY default.conf /etc/nginx/conf.d/
 COPY --from=build-deps /app/build/ /server_root/
